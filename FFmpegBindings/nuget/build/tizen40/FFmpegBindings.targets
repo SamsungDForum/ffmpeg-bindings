@@ -7,6 +7,11 @@
             <TizenTpkSubDir>bin\runtimes\tizen-armel\native\</TizenTpkSubDir>
             <TizenTpkFileName>%(Filename)%(Extension)</TizenTpkFileName>
         </TizenTpkFiles>
+        <TizenTpkFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\tizen-x86\native\*">
+            <Visible>false</Visible>
+            <TizenTpkSubDir>bin\runtimes\tizen-x86\native\</TizenTpkSubDir>
+            <TizenTpkFileName>%(Filename)%(Extension)</TizenTpkFileName>
+        </TizenTpkFiles>
     </ItemGroup>
 
 </Project>
