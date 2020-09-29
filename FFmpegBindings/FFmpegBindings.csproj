@@ -1,8 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
+        <Version>3.3.6</Version>
         <TargetFramework>netstandard2.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Content Include="runtimes\tizen-armel\native\*">
+            <PackagePath>runtimes\tizen-armel\native</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Include="nuget\build\tizen40\FFmpegBindings.targets">
+            <PackagePath>build\tizen40</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 </Project>
