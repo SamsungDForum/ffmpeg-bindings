@@ -3,7 +3,7 @@
         <Version>3.3.6</Version>
         <TargetFramework>netstandard2.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <PackageLicenseFile>LICENSE.LGPL</PackageLicenseFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <Company>SRPOL MVS</Company>
         <Description>FFmpeg bindings for TIZEN .NET</Description>
         <Copyright>Samsung Electronics</Copyright>
@@ -11,8 +11,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\LICENSE.LGPL">
-            <Link>LICENSE.LGPL</Link>
+        <None Include="..\LICENSE.md">
+            <Link>LICENSE.md</Link>
             <Pack>true</Pack>
             <PackagePath>$(PackageLicenseFile)</PackagePath>
         </None>
