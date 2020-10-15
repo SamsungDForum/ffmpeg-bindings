@@ -3,9 +3,16 @@
         <Version>3.3.6</Version>
         <TargetFramework>netstandard2.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <PackageLicenseFile>LICENSE.LGPL</PackageLicenseFile>
+        <PackageProjectUrl>https://github.com/SamsungDForum/ffmpeg-bindings</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>
+        <None Include="..\LICENSE.LGPL">
+            <Link>LICENSE.LGPL</Link>
+            <Pack>true</Pack>
+            <PackagePath>$(PackageLicenseFile)</PackagePath>
+        </None>
         <Content Include="runtimes\tizen-armel\native\*">
             <PackagePath>runtimes\tizen-armel\native</PackagePath>
             <Pack>true</Pack>
