@@ -3,9 +3,19 @@
         <Version>3.3.6</Version>
         <TargetFramework>netstandard2.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <Company>SRPOL MVS</Company>
+        <Description>FFmpeg bindings for TIZEN .NET</Description>
+        <Copyright>Samsung Electronics</Copyright>
+        <PackageProjectUrl>https://github.com/SamsungDForum/ffmpeg-bindings</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>
+        <None Include="..\LICENSE.md">
+            <Link>LICENSE.md</Link>
+            <Pack>true</Pack>
+            <PackagePath>$(PackageLicenseFile)</PackagePath>
+        </None>
         <Content Include="runtimes\tizen-armel\native\*">
             <PackagePath>runtimes\tizen-armel\native</PackagePath>
             <Pack>true</Pack>
