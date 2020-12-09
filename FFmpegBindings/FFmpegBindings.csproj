@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Version>4.3.1</Version>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <Company>SRPOL MVS</Company>
+        <Description>FFmpeg bindings for TIZEN .NET</Description>
+        <Copyright>Samsung Electronics</Copyright>
+        <PackageProjectUrl>https://github.com/SamsungDForum/ffmpeg-bindings</PackageProjectUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE.md">
+            <Link>LICENSE.md</Link>
+            <Pack>true</Pack>
+            <PackagePath>$(PackageLicenseFile)</PackagePath>
+        </None>
+        <Content Include="runtimes\tizen-armel\native\*">
+            <PackagePath>runtimes\tizen-armel\native</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="runtimes\tizen-x86\native\*">
+            <PackagePath>runtimes\tizen-x86\native</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Include="nuget\build\tizen40\FFmpegBindings.targets">
+            <PackagePath>build\tizen40</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+</Project>
